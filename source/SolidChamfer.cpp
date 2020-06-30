@@ -128,7 +128,7 @@ Vector GetOffset(Vector edgedir, Vector crossdir, bool orthogonal){
 	Vector off=!crossdir;
 	if(orthogonal){
 		edgedir.Normalize();
-		off=off-(off*edgedir)*edgedir;
+		off=off-Dot(off,edgedir)*edgedir;
 		off.Normalize();
 	}
 	return off;
